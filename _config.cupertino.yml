@@ -51,7 +51,7 @@ scroll_reveal_query: .scroll-reveal, .post-list-item, .card, .content p img, .co
 scroll_reveal_disappear: false
 
 nav:
-  title: Blog
+  title: Jinyuan's Blog
   items:
     - name: Archives
       url: /archives
@@ -101,9 +101,9 @@ footer:
     items:
       - name: GitHub
         url: https://github.com/jinyuanZhou-Leo
-      - name: Email
+      - name: Email - Personal
         url: mailto:jinyuanleo@gmail.com
-      - name: Email
+      - name: Email - University
         url: mailto:jinyuan.zhou@mail.utoronto.ca
 
 # footer extra description
@@ -128,6 +128,14 @@ view_transition: true
 # refer to https://momentjs.com/docs/#/displaying/format/
 date_display_format: MMMM D, YYYY
 
+# CDN
+cdn:
+  template: https://unpkg.com/:package@:version/:file
+  replacements:
+    package: :package
+    version: :version
+    file: :file
+
 hero_exit_while_scrolling:
   enabled: true
   blur_filter: false
@@ -139,7 +147,7 @@ builtin_components:
   utilities: true
 
 # smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
-smooth_scroll: true
+smooth_scroll: false
 
 nav_blur_gradient: false
 
