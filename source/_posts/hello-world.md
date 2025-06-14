@@ -1,38 +1,40 @@
 ---
-title: Hello World
+title: 第一篇博客！
+date: 2025-06-15 00:03:09
+tags:
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+# Hello World！
 
-### Create a new post
+## 不知道起什么标题好
 
-``` bash
-$ hexo new "My New Post"
-```
+打小便喜欢随意折腾电脑，从用着家里四代i3的台式机跟着花儿乐队穷开心的歌声到如今入坑~~coding~~, 也算是走上了自己喜欢的道路。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+小学学习OI的时候，经常漫游于洛谷各个大佬的博客中。作为一个玩心，好奇心很重的人，看博客肯定不是为了研究算法，钻研题目啦，这里点点，那里点点才是乐趣所在！不同的UI设计，有优雅的，有简洁的，有炫酷的，当然还有二次元的，我什么时候也能拥有一个自己的博客呢？虽然当时的我不知道要写什么，但心里总是觉得有一个博客是很酷很酷的事情。
 
-### Run server
+那时的我没啥耐心，博客看似简单，背后一步步的搭建部署对我来说仿佛天书，往往是心血来潮看3分钟教程，然后心里默念：“毁灭吧，下次再说，反正……以后总会学会的嘛”
 
-``` bash
-$ hexo server
-```
+初中的时候，暑假闲来无事，吃鸡，越狱，MC，以及……最后一周赶作业……还有一个令人感到惊吓的期初考试成绩便是我暑假生活的所有。快乐吗？当然是很快乐哒，没心没肺的日子最快乐啦。
 
-More info: [Server](https://hexo.io/docs/server.html)
+升入初二，同学没变，教室没变，可我的心境貌似发生一些变化。中考居然离我那么近，那么近。班主任和我的谈话让我拼了命的开始真正学习起来，那天的办公室和那夜窗台边的夜色是怎么也忘不了的。那年暑假我也第一次制作了一张时间表，写着每一天该完成哪些任务。除了暑假作业，我也励志一定要学会写网页，毕竟网页是我认知当中唯一一个，可以让我的创意以视觉的方式展现出来的东西，从OI学习中C++死气沉沉的黑框框控制台中跳脱出来的东西。
 
-### Generate static files
+二次元风格，新拟态，毛玻璃，Material Design，一次次在父母催促我睡觉的声音中完成的小网页总能让我感觉很满足。
 
-``` bash
-$ hexo generate
-```
+> 可能是一直用苹果手机的缘故吧，我对丝滑流畅，清晰优雅的界面有着强迫症一般的喜爱，就像这个博客一样，使用Apple Newsroom风格的主题
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+慢慢的，我也做出了一个在我心中能称得上博客的东西（虽然只是一堆静态的网页）。
 
-### Deploy to remote sites
+[Fluid](https://gitee.com/Jinyuanzhou/Jinyuanzhou) 
 
-``` bash
-$ hexo deploy
-```
+拿着这套主题，我制作了初中的班级博客，记录了诸如班会，节日活动的内容，想想还是很令人激动的。随着对博客了解的增加，我也认识到，凭我自己是不可能做出一个像样的博客系统的。
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+也许学习本就是这样一个过程——从“黑框框”里走出来，先浮于表面，再逐步深入，又回到“黑框框”中，探寻真正学问
+
+高中之后，渐渐捡起小学时学习的算法，学习了Python，Java。虽然我依然是个什么都不精通，啥啥不会的门外汉，但是令人庆幸的是我依然是个有时间，不用顾生计，还能自由地摸索和尝试的门外汉。
+
+终于，在高中结束的最后一个周末，终于终于整出一个真正的博客啦！
+
+不是自己写的主题，不是自己写的博客系统，但承载了自己的文字和属于自己的快乐。
+
+
+
