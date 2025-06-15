@@ -1,8 +1,8 @@
 # path to your blog's icon
-favicon: /favicon.png
+# favicon: assets/logo/favicon.jpg
 
 # path to manifest.json
-manifest: /manifest.json
+# manifest: /manifest.json
 
 # show excerpt on post list
 show_excerpt: false
