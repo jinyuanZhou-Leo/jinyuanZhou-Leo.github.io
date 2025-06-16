@@ -21,6 +21,10 @@
     </time>
     <% } %>
 
+    <span class="date post-count">
+      Word Count: <%= wordcount(page.content) %> ｜ Expected Read Time: <%= min2read(page.content, {cn: 300, en: 160}) %> min
+    </span>
+
     <h1 class="title"><%= page.title %></h1>
   </div>
 
