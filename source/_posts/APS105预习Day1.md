@@ -1,7 +1,8 @@
 ---
 title: APS105预习 - Day1
 date: 2025-06-17 14:25:34
-tags: APS105
+tags: [APS105,C/C++,预习,笔记]
+categories: [C/C++,APS105]
 ---
 
 ## 前言
