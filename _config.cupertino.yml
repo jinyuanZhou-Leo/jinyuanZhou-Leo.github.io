@@ -5,7 +5,7 @@
 # manifest: /manifest.json
 
 # show excerpt on post list
-show_excerpt: false
+show_excerpt: true
 
 # default light/dark/auto color scheme
 color_scheme: auto
