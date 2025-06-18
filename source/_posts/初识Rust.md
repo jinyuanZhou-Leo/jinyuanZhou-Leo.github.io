@@ -1,5 +1,5 @@
 ---
-title: 呆在家里要生锈啦 - Day 1
+title: 呆在家里要生锈啦 - 01
 date: 2025-06-18 18:42:13
 tags: [Rust, 杂记]
 categories: [Rust]
