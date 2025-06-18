@@ -1,5 +1,5 @@
 ---
-title: 初识Rust - Day 1
+title: 呆在家里要生锈啦 - Day 1
 date: 2025-06-18 18:42:13
 tags: [Rust, 杂记]
 categories: [Rust]
@@ -7,7 +7,7 @@ categories: [Rust]
 
 ## 哇塞！
 
-从`rustup`到`cargo`，`rust`工具链优秀的设计和人文关怀，给我留下了深刻的影响。那就……生锈(rustify)从今天开始！
+从`rustup`到`cargo`，`rust`工具链优秀的设计和人文关怀，给我留下了深刻的影响。那就……从今天开始生锈(rustify)！
 
 ## Rust 圣经
 
