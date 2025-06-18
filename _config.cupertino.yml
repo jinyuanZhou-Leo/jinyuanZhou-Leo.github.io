@@ -44,7 +44,7 @@ rainbow_banner_month: 6
 
 # table of contents
 toc: true
-toc_max_depth: 2
+toc_max_depth: 3
 
 scroll_reveal: true
 scroll_reveal_query: .scroll-reveal, .post-list-item, .card, .content p img, .content .block-large img
