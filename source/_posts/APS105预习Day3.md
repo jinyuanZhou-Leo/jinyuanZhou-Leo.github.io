@@ -1,5 +1,5 @@
 ---
-title: APS105预习Day3
+title: APS105预习 - 03
 date: 2025-06-19 13:50:20
 tags: [APS105,C/C++,预习,笔记]
 categories: [C/C++,APS105]
