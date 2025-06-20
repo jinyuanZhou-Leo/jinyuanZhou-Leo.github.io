@@ -3,7 +3,7 @@ title: APS105预习Day4
 date: 2025-06-20 13:32:33
 tags: [APS105,C/C++,预习,笔记]
 categories: [C/C++,APS105]
-cover_image: /assets/images/APS105-cover.png
+cover_image: /assets/images/APS105-cover.webp
 ---
 
 ## 前言
