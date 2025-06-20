@@ -4,7 +4,7 @@ date: 2025-06-18 18:42:13
 tags: [Rust，学习笔记]
 categories: [Rust]
 excerpt: Rust学习笔记
-cover_image: /assets/images/rust-cover.png
+cover_image: /assets/images/rust-cover.webp
 ---
 
 ## 哇塞！
