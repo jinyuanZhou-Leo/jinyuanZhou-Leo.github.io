@@ -1,3 +1,7 @@
+body {
+  margin-top: 0;
+}
+
 .post {
   margin-bottom: 64px;
 }
@@ -45,14 +49,53 @@
 @include meta('.title', '.date', '.categories');
 
 .post {
+  & > .cover {
+    max-width: 100%;
+    overflow: clip visible;
+
+    & > .cover-img {
+      --h: 300px;
+      mask-image: linear-gradient(to bottom, #000, transparent);
+      mask-composite: destination-in;
+      height: var(--h);
+      margin-bottom: calc(var(--h) * -0.6);
+      object-fit: cover;
+      pointer-events: none;
+
+      @supports (animation-timeline: scroll()) {
+        --range: calc(var(--h) * 3);
+        --offset-coefficient: 0.5;
+
+        @keyframes cover-exit {
+          0% {
+          }
+
+          100% {
+            opacity: 0;
+            scale: 1.2;
+            margin-top: calc(var(--range) * var(--offset-coefficient));
+            margin-bottom: calc(var(--range) * -1 * var(--offset-coefficient));
+            filter: var(--filter-blur);
+          }
+        }
+
+        will-change: filter, margin-top, margin-bottom, opacity, scale;
+        animation-name: cover-exit;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll();
+        animation-range: 0 var(--range);
+      }
+    }
+  }
+
   $content: '& > .content';
 
   #{$content} {
     margin-top: 64px;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.4211;
     font-weight: 400;
-    letter-spacing: 0.012em;
   }
 
   /* only `#{$content} > pre`, do not include <pre /> in <figure /> */
@@ -257,6 +300,10 @@
       p {
         margin: 6px 0;
       }
+    }
+
+    & > .extra {
+      font-size: 15px;
     }
   }
 

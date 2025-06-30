@@ -1,5 +1,33 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.10
+
+### Minor Changes
+
+- 5cd71dc: Add carousel component.
+- 85a912a: Add `about_extra_description` option for posts.
+
+### Patch Changes
+
+- a9ea6db: Fix cover image overlaying on meta area.
+
+## 2.0.0-beta.9
+
+### Major Changes
+
+- 856ed22: Reimplement search features with [Pagefind](https://pagefind.app/). Search features now require Pagefind to operate.
+
+### Minor Changes
+
+- 75a504b: Add cover image to the top of a post.
+- 78bda33: Change font to Inter.
+- 26df5fa: Change transform origin of hero exit while scrolling to left top.
+- 1c153f9: Redesign hero section and avoid text overflow.
+
+### Patch Changes
+
+- 5d6c178: Make the background of nav with blur gradient be the same as the background of the page.
+
 ## 2.0.0-beta.8
 
 ### Minor Changes
