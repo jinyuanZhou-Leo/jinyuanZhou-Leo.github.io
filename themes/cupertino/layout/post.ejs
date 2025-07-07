@@ -7,9 +7,9 @@
 <% } else { %>
 <article class="post">
   <% if (page.cover_image) { %>
-    <div class="cover">
-      <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img"
-        data-pagefind-meta="image[src], image_alt[alt]" />
+  <div class="cover">
+    <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img"
+      data-pagefind-meta="image[src], image_alt[alt]" />
     </div>
     <% } %>
   <div class="meta">
@@ -26,7 +26,7 @@
       <%- moment(page.date).format(theme.date_display_format) %>
     </time>
     <% } %>
-    
+
     <span class="date post-count">
       Word Count: <%= wordcount(page.content) %> ｜ Expected Read Time: <%= min2read(page.content, {cn: 300, en: 160}) %> min
     </span>

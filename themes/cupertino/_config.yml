@@ -35,7 +35,7 @@ hashtag_prefix_before_tags: true
 tags_post_count: true
 
 # rainbow!
-rainbow_banner: true
+rainbow_banner: false
 rainbow_banner_colors:
   - '#e50000'
   - '#ff8d00'
@@ -133,7 +133,7 @@ license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
 # based on [Pagefind](https://pagefind.app/)
-search: true
+search: false
 
 # icons
 simple_icons: true
