@@ -115,13 +115,6 @@ permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 
-# hexo-generator-search
-search:
-  path: search.json
-  field: post
-  content: true
-  template: ./search.json
-
 # hexo-wordcount
 postInfo:
   date: true
