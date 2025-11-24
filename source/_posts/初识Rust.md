@@ -7,10 +7,6 @@ excerpt: Rust学习笔记
 cover_image: /assets/images/rust-cover.webp
 ---
 
-## 哇塞！
-
-从`rustup`到`cargo`，`rust`工具链优秀的设计和人文关怀，给我留下了深刻的影响。那就……从今天开始生锈(rustify)！
-
 ## Rust 圣经
 
 被名字耽误的神级教材：[Rust 圣经](https://course.rs/about-book.html)

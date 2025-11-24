@@ -7,7 +7,7 @@ cover_image: /assets/images/APS105-cover.webp
 ---
 ## 前言
 
-非常好，这个系列居然能来到第二天🔥
+这个系列居然能来到第二天🔥
 
 ## Chapter 2 Data operation and representation
 
