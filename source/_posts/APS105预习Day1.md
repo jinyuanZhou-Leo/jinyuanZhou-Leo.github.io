@@ -60,7 +60,7 @@ cover_image: /assets/images/APS105-cover.webp
 | 类型           | Format Specifier | 说明                                    |
 | -------------- | ---------------- | --------------------------------------- |
 | `int`          | `%d`             | 整数，正或负，4-bytes (32bit)           |
-| `unsigned int` |                  | 无符号整数，4-bytes, $ 0 \sim 2^31 - 1$ |
+| `unsigned int` |                  | 无符号整数，4-bytes, 0 ~ 2^32 - 1$ |
 | `float`        | `%f`             | 单精度浮点数，4-bytes                   |
 | `double `      | `%lf`            | 双精度浮点数, 8-bytes                   |
 | `char`         | `%c`             | 字符, 1-bytes, 使用ASCII码存储          |
