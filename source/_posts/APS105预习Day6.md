@@ -1,5 +1,5 @@
 ---
-title: APS105预习 - 06
+title: APS105笔记 06 多维数组动态分配
 date: 2025-06-27 16:13:18
 tags: [APS105,C/C++,预习,笔记]
 categories: [C/C++,APS105]

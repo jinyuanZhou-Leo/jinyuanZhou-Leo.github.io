@@ -1,5 +1,5 @@
 ---
-title: APS105预习 - 07
+title: APS105笔记 07 字符串基础
 date: 2025-06-29 16:51:38
 tags: [APS105,C/C++,预习,笔记]
 categories: [C/C++,APS105]

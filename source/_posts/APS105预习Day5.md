@@ -1,5 +1,5 @@
 ---
-title: APS105预习 - 05
+title: APS105笔记 05 多维数组
 date: 2025-06-26 21:43:01
 tags: [APS105,C/C++,预习,笔记]
 categories: [C/C++,APS105]
