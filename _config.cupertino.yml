@@ -97,6 +97,10 @@ footer:
         url: https://github.com/jinyuanZhou-Leo/iSchedule
       - name: LLMCoTAnalyzer
         url: https://github.com/jinyuanZhou-Leo/LLMCoTAnalyzer
+      - name: jsh
+        url: https://github.com/jinyuanZhou-Leo/jsh
+      - name: Semestra
+        url: https://github.com/jinyuanZhou-Leo/Semestra
   - group_name: Me
     items:
       - name: GitHub
