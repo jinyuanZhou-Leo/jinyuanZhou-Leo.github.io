@@ -37,26 +37,44 @@
   <link rel='manifest' href='<%= theme.manifest %>'>
   <% } %>
 
-  <%- open_graph() %>
+  <%- open_graph({ image: page.cover_image }) %>
+
+  <script>window.ThemeCupertino = {}</script>
 
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <% if (theme.simple_icons) { %>
-  <%- css(getCdnUrl('simple-icons-font', 'v13', 'font/simple-icons.min.css')) %>
+  <%- css(getCdnUrl('simple-icons-font', '16', 'font/simple-icons.min.css')) %>
   <% } %>
   <% if (theme.bootstrap_icons) { %>
-  <%- css(getCdnUrl('bootstrap-icons', '1.11.3', 'font/bootstrap-icons.min.css')) %>
+  <%- css(getCdnUrl('bootstrap-icons', '1', 'font/bootstrap-icons.min.css')) %>
   <% } %>
 
   <%- css('css/var') %>
   <%- css('css/main') %>
   <%- css('css/typography') %>
   <%- css('css/code-highlighting') %>
-  <% for (const i in theme.builtin_components) { %>
-  <% if (theme.builtin_components[i]) { %>
-  <%- css('css/components/' + i) %>
+
+  <% if (theme.builtin_components.card) { %>
+  <%- css('css/components/card') %>
   <% } %>
+  <% if (theme.builtin_components.button) { %>
+  <%- css('css/components/button') %>
   <% } %>
+  <% if (theme.builtin_components.badge) { %>
+  <%- css('css/components/badge') %>
+  <% } %>
+  <% if (theme.builtin_components.utilities) { %>
+  <%- css('css/components/utilities') %>
+  <% } %>
+  <% if (theme.builtin_components.carousel) { %>
+  <%- css('css/components/carousel') %>
+  <% } %>
+  <% if (theme.builtin_components.callout) { %>
+  <script>ThemeCupertino['_calloutStyles'] = `<%- css('css/components/callout') %>`</script>
+  <%- js('js/components/callout.js') %>
+  <% } %>
+
   <%- css('css/nav') %>
   <%- css('css/paginator') %>
   <%- css('css/footer') %>
@@ -67,16 +85,13 @@
   <% if (theme.toc) { %>
   <%- css('css/toc') %>
   <% } %>
-  <% if (config.giscus) { %>
-    <%- css('css/giscus') %>
-  <% } %>
   <% if (page.path == "index.html") { %>
   <%- css('css/index') %>
   <% } %>
   <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
   <% } %>
-  <% if (is_archive() || is_category() || is_tag() || (theme.search == true && page.type == 'search') || page.type == 'tags' || page.type == 'categories') { %>
+  <% if (is_archive() || is_category() || is_tag()) { %>
   <%- css('css/archive') %>
   <% } %>
   <% if (theme.search == true && page.type == 'search') { %>
@@ -97,14 +112,9 @@
   <%- css('css/view-transition') %>
   <% } %>
   <% if (theme.smooth_scroll) { %>
-  <script src="<%- getCdnUrl('lenis', '1.1.9', 'dist/lenis.min.js') %>"></script>
-  <%- css(getCdnUrl('lenis', '1.1.9', 'dist/lenis.css')) %>
+  <script src="<%- getCdnUrl('lenis', '1', 'dist/lenis.min.js') %>"></script>
+  <%- css(getCdnUrl('lenis', '1', 'dist/lenis.css')) %>
   <%- js('js/smooth-scroll.js') %>
-  <% } %>
-
-  <% if (config.waline) { %>
-  <script src="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.js') %>"></script>
-  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.css') %>" />
   <% } %>
 
   <%- js('js/head.js') %>

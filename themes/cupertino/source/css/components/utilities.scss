@@ -1,3 +1,5 @@
+@use './utilities_partial.scss' as *;
+
 .block-large {
   max-width: 1000px;
   margin: auto;
@@ -7,18 +9,22 @@
   user-select: none;
 }
 
-$textAligns: left, center, right;
-
 @each $align in $textAligns {
   .text-#{$align} {
     text-align: $align;
   }
 }
 
-$textTransforms: uppercase, lowercase, capitalize;
-
 @each $transform in $textTransforms {
   .text-#{$transform} {
     text-transform: $transform;
   }
+}
+
+.corner-squircle {
+  @include corner-squircle;
+}
+
+.no-corner-squircle {
+  @include no-corner-squircle;
 }

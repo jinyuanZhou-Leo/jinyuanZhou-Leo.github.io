@@ -3,38 +3,34 @@ name: Pages
 on:
   push:
     branches:
-      - main # default branch
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
-          submodules: recursive
-      - name: Use Node.js 24.2.0
-        uses: actions/setup-node@v4
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Set up pnpm
+        uses: pnpm/setup@v1
         with:
-          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
-          # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: "24.2.0"
-      - name: Cache NPM dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
-        run: npm install
+          install: false
+          cache: true
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Build
-        run: npm run build
-      - name: Pagefind Indexing
-        run: npm run index
+        run: pnpm run build
+      - name: Pagefind indexing
+        run: pnpm run index
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
   deploy:
@@ -49,4 +45,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

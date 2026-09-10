@@ -1,3 +1,5 @@
+@use './components/utilities_partial.scss' as utilities;
+
 body {
   margin-top: 0;
 }
@@ -30,6 +32,10 @@ body {
         font-size: 13px;
         margin-right: 6px;
         text-decoration: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -55,7 +61,26 @@ body {
 
     & > .cover-img {
       --h: 300px;
-      mask-image: linear-gradient(to bottom, #000, transparent);
+      /* https://larsenwork.com/easing-gradients/ */
+      mask-image: linear-gradient(
+        to bottom,
+        hsl(0, 0%, 0%) 0%,
+        hsla(0, 0%, 0%, 0.987) 8.1%,
+        hsla(0, 0%, 0%, 0.951) 15.5%,
+        hsla(0, 0%, 0%, 0.896) 22.5%,
+        hsla(0, 0%, 0%, 0.825) 29%,
+        hsla(0, 0%, 0%, 0.741) 35.3%,
+        hsla(0, 0%, 0%, 0.648) 41.2%,
+        hsla(0, 0%, 0%, 0.55) 47.1%,
+        hsla(0, 0%, 0%, 0.45) 52.9%,
+        hsla(0, 0%, 0%, 0.352) 58.8%,
+        hsla(0, 0%, 0%, 0.259) 64.7%,
+        hsla(0, 0%, 0%, 0.175) 71%,
+        hsla(0, 0%, 0%, 0.104) 77.5%,
+        hsla(0, 0%, 0%, 0.049) 84.5%,
+        hsla(0, 0%, 0%, 0.013) 91.9%,
+        hsla(0, 0%, 0%, 0) 100%
+      );
       mask-composite: destination-in;
       height: var(--h);
       margin-bottom: calc(var(--h) * -0.6);
@@ -99,25 +124,24 @@ body {
   }
 
   /* only `#{$content} > pre`, do not include <pre /> in <figure /> */
-  #{$content} p,
-  #{$content} h1,
-  #{$content} h2,
-  #{$content} h3,
-  #{$content} h4,
-  #{$content} h5,
-  #{$content} h6,
-  #{$content} figure,
+  #{$content} > p,
+  #{$content} > h1,
+  #{$content} > h2,
+  #{$content} > h3,
+  #{$content} > h4,
+  #{$content} > h5,
+  #{$content} > h6,
+  #{$content} > figure,
   #{$content} > pre,
-  .divider,
+  #{$content} > .divider,
   .container,
-  hr,
-  .toc,
-  #{$content} blockquote,
-  #{$content} table,
-  #{$content} video,
-  #{$content} ul,
-  #{$content} ol,
-  #{$content} > mjx-container,
+  #{$content} > hr,
+  & > aside > .toc,
+  #{$content} > blockquote,
+  #{$content} > table,
+  #{$content} > video,
+  #{$content} > ul,
+  #{$content} > ol,
   #{$content} > .katex,
   .about {
     @include ctn;
@@ -127,6 +151,7 @@ body {
   #{$content} .block-large img,
   #{$content} figure img {
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
   }
 
   #{$content} .block-large img {
@@ -144,6 +169,7 @@ body {
     padding: 0;
     border-collapse: collapse;
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
     max-width: 800px;
     overflow-x: auto;
 
@@ -169,20 +195,24 @@ body {
   #{$content} table thead tr th {
     &:first-child {
       border-top-left-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
 
     &:last-child {
       border-top-right-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
   }
 
   #{$content} table tbody tr:last-child td {
     &:first-child {
       border-bottom-left-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
 
     &:last-child {
       border-bottom-right-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
   }
 
@@ -209,7 +239,9 @@ body {
     overflow-y: hidden;
     background-color: var(--color-background-secondary);
     border-radius: var(--radius-medium);
-    max-width: calc(800px - 16px * 2);
+    @include utilities.corner-squircle;
+    padding: 0;
+    max-width: 800px;
 
     @media (max-width: 800px) {
       border-radius: 0;
@@ -222,7 +254,10 @@ body {
     }
 
     .gutter {
-      padding-right: 16px;
+      padding-left: 16px;
+      position: sticky;
+      left: 0;
+      text-align: right;
     }
   }
 
@@ -256,7 +291,12 @@ body {
   }
 
   /* for [hexo-math](https://github.com/hexojs/hexo-math): */
-  #{$content} > mjx-container,
+  #{$content} > p:has(mjx-container[display='true']) {
+    max-width: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    text-align: center;
+  }
   #{$content} > .katex {
     display: block;
     text-align: center;
@@ -282,6 +322,7 @@ body {
 
   .about {
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
     background-color: var(--color-background-secondary);
     max-width: calc(800px - 16px * 2);
     padding: 16px;
@@ -291,14 +332,15 @@ body {
       border-radius: 0;
     }
 
-    h1 {
-      margin: 0;
-    }
+    h2,
+    .details,
+    .tags,
+    & > .extra {
+      margin-top: 0;
+      margin-bottom: 16px;
 
-    .details {
-      margin: 16px 0;
-      p {
-        margin: 6px 0;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 

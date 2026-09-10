@@ -8,10 +8,9 @@
 <article class="post">
   <% if (page.cover_image) { %>
   <div class="cover">
-    <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img"
-      data-pagefind-meta="image[src], image_alt[alt]" />
-    </div>
-    <% } %>
+    <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img" data-pagefind-meta="image[src], image_alt[alt]" />
+  </div>
+  <% } %>
   <div class="meta">
     <% if (page.categories && page.categories.length) { %>
     <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
@@ -27,13 +26,12 @@
     </time>
     <% } %>
 
+    <%# Site customization: keep word count and reading speed across theme upgrades. %>
     <span class="date post-count">
       Word Count: <%= wordcount(page.content) %> ｜ Expected Read Time: <%= min2read(page.content, {cn: 300, en: 160}) %> min
     </span>
 
-    <h1 class="title" data-pagefind-meta="title">
-      <%= page.title %>
-    </h1>
+    <h1 class="title" data-pagefind-meta="title"><%= page.title %></h1>
   </div>
 
   <div class="content">
@@ -42,10 +40,8 @@
 
   <% if (!page.no_about) { %>
   <div class="about" data-pagefind-ignore>
-    <h1><%= __('about_this_post') %></h1>
-    <div class="details">
-      <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
-    </div>
+    <h2><%= __('about_this_post') %></h2>
+    <div class="details"><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></div>
     <% if (page.tags && page.tags.length) { %>
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
       <i class="bi bi-tags icon"></i>
@@ -54,9 +50,7 @@
       <% }) %>
     </p>
     <% } %>
-    <% if (page.about_extra_description) { %>
-      <div class="extra"><%- page.about_extra_description %></div>
-      <% } %>
+    <% if (page.about_extra_description) { %><div class="extra"><%- page.about_extra_description %></div><% } %>
   </div>
   <% } %>
 
@@ -80,22 +74,7 @@
   </div>
 
   <% if (!page.no_comments) { %>
-    <% if (config.waline) { %>
-    <div class="container">
-      <div id="waline"></div>
-      <script>
-        new Waline({
-          el: "#waline",
-          <% for (const i in config.waline) { %>
-          <%- i %>: <%- config.waline[i] %>,
-          <% } %>
-        });
-      </script>
-    </div>
-    <% } %>
-    <% if (config.giscus) { %>
-    <%- config.giscus %>
-    <% } %>
+    <%- theme.insertions.comments_section %>
   <% } %>
 </article>
 <% } %>

@@ -1,0 +1,9 @@
+packages:
+  - themes/cupertino
+
+# Generate syntax-highlighting aliases and install native file watchers.
+allowBuilds:
+  hexo-util@3.3.0: true
+  hexo-util@4.0.0: true
+  '@parcel/watcher@2.6.0': true
+  fsevents@2.3.3: true

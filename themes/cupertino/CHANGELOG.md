@@ -1,5 +1,91 @@
 # hexo-theme-cupertino
 
+## 2.5.0
+
+### Minor Changes
+
+- 8fa46aa: Turn linear gradient masks in cover images to the easing ones.
+
+## 2.4.4
+
+### Patch Changes
+
+- 6b4e54a: Fix inline formulas causing their paragraphes centered.
+
+## 2.4.3
+
+### Patch Changes
+
+- edc9408: Fix gutter of code block scrollable.
+- 8f0c8b3: Fix math formula making container oversized.
+
+## 2.4.2
+
+### Patch Changes
+
+- 880485e: Fix post list item too high in Safari.
+
+## 2.4.1
+
+### Patch Changes
+
+- a457218: Fix post list being obscured by navigation.
+- cb4a1d3: Fix duplicating styles caused by `@use`.
+
+## 2.4.0
+
+### Minor Changes
+
+- 7b2f97a: Add insertion position `insertions.comments_section` and remove undocumented comment features.
+
+## 2.3.0
+
+### Minor Changes
+
+- 80c1d98: Decrease the radius of navigation blur gradient.
+- 4405bdd: Add component `<htc-callout />`.
+
+### Patch Changes
+
+- d5606ce: Fix missing cover image in Open Graph.
+- 50a21c9: Fix `lenis` and `raf` exposure to global environment.
+
+## 2.2.1
+
+### Patch Changes
+
+- 1a3698b: `<a />`s in post list items now fill their parent element.
+- 1a3698b: The cover image zooms out and becomes darker when post list item is clicked.
+
+## 2.2.0
+
+### Minor Changes
+
+- 94bf794: Apply squircle corners to all rounded-corner elements, add theme config option `squircle` to control this and add class `.corner-squircle` and `.no-corner-squircle` for users' custom squircle elements.
+
+## 2.1.2
+
+### Patch Changes
+
+- e4389ed: Improve a11y and SEO by ensuring each page has only one `<h1>`.
+  - In `post.ejs`, the "About This Post" heading has been changed from `<h1>` to `<h2>` to reduce redundant H1 tags.
+  - In `tags.ejs`, `categories.ejs`, `archive.ejs`, and `index.ejs`, the main headings have been elevated from `<h2>` to `<h1>` to ensure a clear primary heading on each page.
+
+## 2.1.1
+
+### Patch Changes
+
+- c3120d4: Fix: Eliminate 404 console error on archive, category, and tag pages.
+  - Resolves a persistent 404 console error by creating the missing `css/archive.css` file.
+  - Improves internal style maintenance by isolating archive-specific styles from `post-list.scss` to the new dedicated `archive.scss`.
+
+## 2.1.0
+
+### Minor Changes
+
+- b756952: Smooth scroll is changed to disabled by default.
+- 08752a5: Remove some default config items.
+
 ## 2.0.0
 
 ### Major Changes
