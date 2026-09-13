@@ -86,9 +86,9 @@ footer:
       - name: Projects
         url: /projects
       - name: Resume
-        url: /resume
+        url: https://jyleo.cc
       - name: About
-        url: /about
+        url: https://jyleo.cc/
       - name: RSS
         url: /atom.xml
   - group_name: Projects
